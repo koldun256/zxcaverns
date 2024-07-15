@@ -18,5 +18,3 @@ position = Vector2(90, 546)
 layer = 100
 
 [node name="PauseMenu" parent="InterfaceLayer" instance=ExtResource("4_x6l06")]
-
-[connection signal="coin_collected" from="Level/Player" to="InterfaceLayer/PauseMenu" method="_on_coin_collected"]
