@@ -69,6 +69,11 @@ long/chargeble dash
 
 floor is lava infinite jumps
 
+# level design
+
+## basic room ideas
+
+
 # enemies
 
 ## regular mobsters
