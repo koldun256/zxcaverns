@@ -1,7 +1,25 @@
-[gd_scene load_steps=17 format=3 uid="uid://bsyqg6eh3wl5i"]
+[gd_scene load_steps=17 format=3 uid="uid://epjx7cyh7vhb"]
 
 [ext_resource type="Theme" uid="uid://da4noqsij73it" path="res://gui/theme.tres" id="1_mctnl"]
-[ext_resource type="Script" path="res://gui/coins_counter.gd" id="3"]
+
+[sub_resource type="GDScript" id="GDScript_aal7q"]
+script/source = "class_name CoinsCounter extends Panel
+
+
+var _coins_collected: int = 0
+
+@onready var _coins_label := $Label as Label
+
+
+func _ready() -> void:
+	_coins_label.set_text(str(_coins_collected))
+	($AnimatedSprite2D as AnimatedSprite2D).play()
+
+
+func collect_coin() -> void:
+	_coins_collected += 1
+	_coins_label.set_text(str(_coins_collected))
+"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_prnkx"]
 load_path = "res://.godot/imported/coin.webp-1d50c095672512acb2df6e9dbf7e85c6.ctex"
@@ -104,7 +122,7 @@ offset_top = 5.0
 offset_right = 100.0
 offset_bottom = 45.0
 theme = ExtResource("1_mctnl")
-script = ExtResource("3")
+script = SubResource("GDScript_aal7q")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
