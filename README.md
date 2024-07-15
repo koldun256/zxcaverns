@@ -1,9 +1,11 @@
 # ZXCaverns
 Игра, в которой игроку каждый забег даётся набор свойств, меняющих геймплей
 
-##jivka (poka chto net)
+# Perks
+
+## jivka (poka chto net)
 	
-##weapons
+## weapons
 	
 knife/rapier/sword - close combat, dive in - get out
 
@@ -37,7 +39,7 @@ clock - makes enemy return to his initial place, then dissolves(broken)
 
 falling piano
 
-##mobility
+## mobility
 	
 harpoon
 
@@ -67,7 +69,9 @@ long/chargeble dash
 
 floor is lava infinite jumps
 
-##enemies
+# enemies
+
+## regular mobsters
 	
 melee      (maybe has shield or smth)
 
