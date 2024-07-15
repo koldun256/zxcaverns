@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://w8ds8f0e3e0n"
-path="res://.godot/imported/melee-swing.png-372a0f5609a8ac59487364f3b513a3b8.ctex"
+path="res://.godot/imported/melee-swing.png-57f4d2cb090429474c0c1f92e658cc66.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://perks/combat/melee-swing.png"
-dest_files=["res://.godot/imported/melee-swing.png-372a0f5609a8ac59487364f3b513a3b8.ctex"]
+source_file="res://perks/combat/sword/melee-swing.png"
+dest_files=["res://.godot/imported/melee-swing.png-57f4d2cb090429474c0c1f92e658cc66.ctex"]
 
 [params]
 
