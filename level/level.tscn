@@ -1,9 +1,8 @@
-[gd_scene load_steps=24 format=3 uid="uid://ctgumjaytuoch"]
+[gd_scene load_steps=23 format=3 uid="uid://ctgumjaytuoch"]
 
 [ext_resource type="TileSet" uid="uid://08mkofgbxx70" path="res://level/tileset.tres" id="1"]
 [ext_resource type="PackedScene" uid="uid://6mtip3ruyn" path="res://enemy/enemy.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://cky6e5nl0nyod" path="res://level/platforms/platform.tscn" id="3"]
-[ext_resource type="PackedScene" uid="uid://c3dh7xb6ef76q" path="res://level/coin.tscn" id="4"]
 [ext_resource type="Texture2D" uid="uid://bxsmiv7k3fngt" path="res://level/platforms/moving_platform.webp" id="6"]
 [ext_resource type="PackedScene" uid="uid://cw6nldo3rjyyq" path="res://level/background/parallax_background.tscn" id="7"]
 [ext_resource type="Texture2D" uid="uid://bj6am5nfc0k73" path="res://level/props/grass_1.webp" id="10"]
@@ -1206,85 +1205,6 @@ material = ExtResource("18")
 position = Vector2(584, 382)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("11")
-
-[node name="Coins" type="Node" parent="."]
-
-[node name="CoinsHorizontal1" type="Node2D" parent="Coins"]
-position = Vector2(700, 610)
-
-[node name="Coin" parent="Coins/CoinsHorizontal1" instance=ExtResource("4")]
-
-[node name="Coin2" parent="Coins/CoinsHorizontal1" instance=ExtResource("4")]
-position = Vector2(30, 0)
-
-[node name="Coin3" parent="Coins/CoinsHorizontal1" instance=ExtResource("4")]
-position = Vector2(60, 0)
-
-[node name="CoinsHorizontal3" type="Node2D" parent="Coins"]
-position = Vector2(154, 43)
-
-[node name="Coin" parent="Coins/CoinsHorizontal3" instance=ExtResource("4")]
-
-[node name="Coin2" parent="Coins/CoinsHorizontal3" instance=ExtResource("4")]
-position = Vector2(30, 0)
-
-[node name="Coin3" parent="Coins/CoinsHorizontal3" instance=ExtResource("4")]
-position = Vector2(60, 0)
-
-[node name="CoinsHorizontal2" type="Node2D" parent="Coins"]
-position = Vector2(200, 610)
-
-[node name="Coin" parent="Coins/CoinsHorizontal2" instance=ExtResource("4")]
-
-[node name="Coin2" parent="Coins/CoinsHorizontal2" instance=ExtResource("4")]
-position = Vector2(30, 0)
-
-[node name="Coin3" parent="Coins/CoinsHorizontal2" instance=ExtResource("4")]
-position = Vector2(60, 0)
-
-[node name="CoinsArc1" type="Node2D" parent="Coins"]
-position = Vector2(307, 594)
-
-[node name="Coin" parent="Coins/CoinsArc1" instance=ExtResource("4")]
-
-[node name="Coin2" parent="Coins/CoinsArc1" instance=ExtResource("4")]
-position = Vector2(30, -10)
-
-[node name="Coin3" parent="Coins/CoinsArc1" instance=ExtResource("4")]
-position = Vector2(60, 0)
-
-[node name="CoinsArc2" type="Node2D" parent="Coins"]
-position = Vector2(453, 332)
-
-[node name="Coin" parent="Coins/CoinsArc2" instance=ExtResource("4")]
-
-[node name="Coin2" parent="Coins/CoinsArc2" instance=ExtResource("4")]
-position = Vector2(30, -10)
-
-[node name="Coin3" parent="Coins/CoinsArc2" instance=ExtResource("4")]
-position = Vector2(60, 0)
-
-[node name="CoinsArc4" type="Node2D" parent="Coins"]
-position = Vector2(122, 406)
-
-[node name="Coin" parent="Coins/CoinsArc4" instance=ExtResource("4")]
-
-[node name="Coin2" parent="Coins/CoinsArc4" instance=ExtResource("4")]
-position = Vector2(30, -10)
-
-[node name="Coin3" parent="Coins/CoinsArc4" instance=ExtResource("4")]
-position = Vector2(60, 0)
-
-[node name="CoinsArc3" type="Node2D" parent="Coins"]
-position = Vector2(594, 332)
-
-[node name="Coin" parent="Coins/CoinsArc3" instance=ExtResource("4")]
-
-[node name="Coin2" parent="Coins/CoinsArc3" instance=ExtResource("4")]
-position = Vector2(30, -10)
-
-[node name="Coin3" parent="Coins/CoinsArc3" instance=ExtResource("4")]
-position = Vector2(60, 0)
 
 [node name="Platforms" type="Node" parent="."]
 
