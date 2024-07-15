@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dh71g61cm8k44"]
+[gd_scene load_steps=3 format=3 uid="uid://dh71g61cm8k44"]
 
 [ext_resource type="Theme" uid="uid://da4noqsij73it" path="res://gui/theme.tres" id="1"]
 [ext_resource type="Script" path="res://gui/pause_menu.gd" id="2"]
-[ext_resource type="PackedScene" uid="uid://bsyqg6eh3wl5i" path="res://gui/coins_counter.tscn" id="4"]
 
 [node name="PauseMenu" type="Control"]
 process_mode = 3
@@ -53,13 +52,6 @@ text = "Resume"
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Quit"
-
-[node name="CoinsCounter" parent="ColorRect" instance=ExtResource("4")]
-layout_mode = 0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 105.0
-offset_bottom = 50.0
 
 [connection signal="pressed" from="ColorRect/CenterContainer/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="ColorRect/CenterContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

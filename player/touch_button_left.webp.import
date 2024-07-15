@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj2absxg54f75"
-path="res://.godot/imported/coin.webp-1d50c095672512acb2df6e9dbf7e85c6.ctex"
+uid="uid://8g15fmgwiffk"
+path="res://.godot/imported/touch_button_left.webp-a9260d99a2183f7f727b099496c5dad2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level/coin.webp"
-dest_files=["res://.godot/imported/coin.webp-1d50c095672512acb2df6e9dbf7e85c6.ctex"]
+source_file="res://player/touch_button_left.webp"
+dest_files=["res://.godot/imported/touch_button_left.webp-a9260d99a2183f7f727b099496c5dad2.ctex"]
 
 [params]
 

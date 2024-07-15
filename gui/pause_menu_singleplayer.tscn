@@ -4,8 +4,10 @@
 
 [node name="PauseMenu" instance=ExtResource("1_pwe1t")]
 
-[node name="SplitscreenButton" type="Button" parent="ColorRect/CenterContainer/VBoxContainer" index="3"]
-layout_mode = 2
-text = "Change to 2-Player"
-
-[connection signal="pressed" from="ColorRect/CenterContainer/VBoxContainer/SplitscreenButton" to="." method="_on_splitscreen_button_pressed"]
+[node name="CoinsCounter" parent="ColorRect" index="1"]
+visible = false
+offset_left = 374.0
+offset_top = 180.0
+offset_right = 479.0
+offset_bottom = 230.0
+script = null

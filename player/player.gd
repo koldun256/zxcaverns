@@ -1,8 +1,6 @@
 class_name Player extends CharacterBody2D
 
 
-signal coin_collected()
-
 const WALK_SPEED = 300.0
 const ACCELERATION_SPEED = WALK_SPEED * 6.0
 const JUMP_VELOCITY = -725.0
