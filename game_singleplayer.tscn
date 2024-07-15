@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ctgumjaytuoch" path="res://level/level.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://vh7pmputa7r3" path="res://player/player.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://c7ai4bigaryci" path="res://gui/pause_menu_singleplayer.tscn" id="4_x6l06"]
-[ext_resource type="Script" path="res://perks/mobility/fly.gd" id="6_nbodu"]
+[ext_resource type="Script" path="res://perks/mobility/super_regular.gd" id="5_upuwr"]
 
 [node name="Game" type="Node"]
 process_mode = 3
@@ -27,4 +27,6 @@ layer = 100
 [node name="ReverseGravity" type="Node" parent="Perks"]
 
 [node name="Fly" type="Node" parent="Perks"]
-script = ExtResource("6_nbodu")
+
+[node name="SuperRegular" type="Node" parent="Perks"]
+script = ExtResource("5_upuwr")
