@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://vh7pmputa7r3"]
+[gd_scene load_steps=7 format=3 uid="uid://vh7pmputa7r3"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="3"]
+[ext_resource type="Script" path="res://perks/combat/Weapon.gd" id="3_46cte"]
+[ext_resource type="Texture2D" uid="uid://w8ds8f0e3e0n" path="res://perks/combat/melee-swing.png" id="4_jykih"]
 [ext_resource type="Texture2D" uid="uid://cc7o7t0ramd6y" path="res://player/robot.webp" id="9"]
 
 [sub_resource type="RectangleShape2D" id="11"]
 size = Vector2(42.5, 54.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vxlpw"]
+size = Vector2(28.75, 41.25)
 
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(0.8, 0.8)
@@ -31,31 +36,20 @@ limit_bottom = 690
 position = Vector2(0, -14)
 shape = SubResource("11")
 
-[node name="UI" type="CanvasLayer" parent="."]
-layer = 0
+[node name="Weapon" type="Area2D" parent="."]
+position = Vector2(0, -12.5)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3_46cte")
 
-[node name="Left" type="TouchScreenButton" parent="UI"]
-position = Vector2(157, 813)
-scale = Vector2(2, 2)
-passby_press = true
-action = "move_left"
-visibility_mode = 1
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Weapon"]
+position = Vector2(34.375, -1.87501)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_vxlpw")
 
-[node name="Right" type="TouchScreenButton" parent="UI"]
-position = Vector2(425, 813)
-scale = Vector2(2, 2)
-passby_press = true
-action = "move_right"
-visibility_mode = 1
+[node name="Sprite2D" type="Sprite2D" parent="Weapon"]
+position = Vector2(31.25, -1.25)
+scale = Vector2(1.33333, 1.33333)
+texture = ExtResource("4_jykih")
 
-[node name="Jump" type="TouchScreenButton" parent="UI"]
-position = Vector2(1871, 813)
-scale = Vector2(2, 2)
-action = "jump"
-visibility_mode = 1
-
-[node name="Fire" type="TouchScreenButton" parent="UI"]
-position = Vector2(1870, 564)
-scale = Vector2(2, 2)
-action = "shoot"
-visibility_mode = 1
+[connection signal="body_entered" from="Weapon" to="Weapon" method="_on_body_entered"]
