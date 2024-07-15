@@ -3,11 +3,3 @@
 [ext_resource type="PackedScene" uid="uid://dh71g61cm8k44" path="res://gui/pause_menu.tscn" id="1_pwe1t"]
 
 [node name="PauseMenu" instance=ExtResource("1_pwe1t")]
-
-[node name="CoinsCounter" parent="ColorRect" index="1"]
-visible = false
-offset_left = 374.0
-offset_top = 180.0
-offset_right = 479.0
-offset_bottom = 230.0
-script = null

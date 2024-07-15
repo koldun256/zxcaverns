@@ -9,8 +9,9 @@ const TERMINAL_VELOCITY = 700
 
 var gravity: int = ProjectSettings.get("physics/2d/default_gravity")
 
-@onready var sprite := $"../Sprite2D" as Sprite2D
-@onready var player := get_parent() as Player
+@onready var game = get_tree().get_root().get_node('Game');
+@onready var player = game.get_player();
+@onready var sprite = player.get_node("Sprite2D");
 
 
 func _physics_process(delta: float) -> void:

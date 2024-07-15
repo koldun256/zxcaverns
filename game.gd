@@ -3,6 +3,10 @@ class_name Game extends Node
 
 @onready var _pause_menu := $InterfaceLayer/PauseMenu as PauseMenu
 
+func get_player():
+	return $"Level/Player" as Player
+func get_level():
+	return $Level as Node
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"toggle_fullscreen"):

@@ -1,6 +1,5 @@
 [gd_scene load_steps=15 format=3 uid="uid://6mtip3ruyn"]
 
-[ext_resource type="Texture2D" uid="uid://coj0d33vyyqx1" path="res://player/bullet.webp" id="1"]
 [ext_resource type="AudioStream" uid="uid://duwm7i44o75o2" path="res://enemy/explode.wav" id="2"]
 [ext_resource type="AudioStream" uid="uid://dm7wsawmylc7b" path="res://enemy/hit.wav" id="3"]
 [ext_resource type="Texture2D" uid="uid://bjjywmvba0sve" path="res://enemy/enemy.webp" id="4"]
@@ -244,6 +243,9 @@ height = 50.0
 [sub_resource type="CanvasItemMaterial" id="6"]
 blend_mode = 1
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_oiq6w"]
+load_path = "res://.godot/imported/bullet.webp-afcd8f50a20e81f25285b6f580e633e3.ctex"
+
 [sub_resource type="Gradient" id="7"]
 offsets = PackedFloat32Array(0.5, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
@@ -295,7 +297,7 @@ one_shot = true
 speed_scale = 1.2
 explosiveness = 0.7
 draw_order = 215832976
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_oiq6w")
 emission_shape = 1
 emission_sphere_radius = 16.0
 spread = 180.0
