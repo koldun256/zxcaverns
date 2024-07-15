@@ -1,4 +1,4 @@
-class_name RegularMovement extends Node
+class_name RegularMovement extends Perk
 
 
 const WALK_SPEED = 300.0
