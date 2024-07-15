@@ -16,8 +16,11 @@ var gravity: int = ProjectSettings.get("physics/2d/default_gravity")
 
 
 func _physics_process(delta: float) -> void:
+	
+	if player.stunned:
+		return
 	handle_vertical_movement(delta)
-
+	
 	handle_horizontal_movement(delta)
 
 	if not is_zero_approx(player.velocity.x):
@@ -27,10 +30,10 @@ func _physics_process(delta: float) -> void:
 			sprite.scale.x = -1.0
 	player.move_and_slide()
 	
-func handle_vertical_movement(delta: float) -> void:
+func handle_vertical_movement(delta: float, _gravity = gravity) -> void:
 	if Input.is_action_just_pressed("jump") and player.is_on_floor():
 		try_jump()
-	player.velocity.y = minf(TERMINAL_VELOCITY, player.velocity.y + gravity * delta)
+	player.velocity.y = minf(TERMINAL_VELOCITY, player.velocity.y + _gravity * delta)
 
 func handle_horizontal_movement(delta: float) -> void:
 	var direction := Input.get_axis("move_left", "move_right") * WALK_SPEED
