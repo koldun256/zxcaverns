@@ -8,6 +8,7 @@ func hide_weapon():
 	$Sprite2D.visible = false
 
 func show_weapon():
+	look_at(get_global_mouse_position())
 	$CollisionShape2D.disabled = false
 	$Sprite2D.visible = true
 
@@ -21,6 +22,5 @@ func _process(delta):
 		hide_weapon()
 
 func _on_body_entered(body):
-	print('asdf')
 	if body is Enemy:
 		(body as Enemy).destroy()
