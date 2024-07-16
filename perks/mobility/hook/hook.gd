@@ -1,8 +1,8 @@
 class_name Hook extends Sprite2D
 
 @onready var ray_cast = $RayCast2D
-var distance: float = 200.0
-var max_distance: float = 200.0
+var distance: float = 999.0
+var max_distance: float = 999.0
 var collision_point
 var ishooked = false
 
@@ -52,5 +52,5 @@ func check_collision():
 		return true
 	else:
 		collision_point = 0
-		distance = 200.0
+		distance = 999.0
 	return false

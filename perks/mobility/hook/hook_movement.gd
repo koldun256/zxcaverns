@@ -8,6 +8,7 @@ var hooked_pos = Vector2(0,0)
 var radius = 0.0
 var speed = 1.0
 var angle = 0.0
+var rotation_side = 0
 
 func _ready():
 	player.add_child(h)
@@ -36,6 +37,8 @@ func _on_sprite_2d_hooked(hooked_position):
 	player.velocity.y = 0
 	hooked = true
 	hooked_pos = hooked_position
+	player.velocity.y = move_toward(player.global_position.y, hooked_position.y, 10)
+	rotation_side = sign(hooked_position.x-player.global_position.x)
 
 func _return_gravity():
 	gravity = ProjectSettings.get("physics/2d/default_gravity")
@@ -43,7 +46,7 @@ func _return_gravity():
 	
 func circular_motion():
 	angle = (player.position-hooked_pos).angle()
-	angle += speed * get_process_delta_time()
+	angle += speed * get_process_delta_time() * rotation_side
 	var new_pos = Vector2(cos(angle),sin(angle)) * radius + hooked_pos
 	
-	player.velocity = (new_pos - player.global_position).normalized()*700
+	player.velocity = (new_pos - player.global_position).normalized()*300
