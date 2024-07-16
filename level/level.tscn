@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://ctgumjaytuoch"]
+[gd_scene load_steps=23 format=3 uid="uid://ctgumjaytuoch"]
 
 [ext_resource type="TileSet" uid="uid://08mkofgbxx70" path="res://level/tileset.tres" id="1"]
 [ext_resource type="PackedScene" uid="uid://6mtip3ruyn" path="res://enemy/enemy.tscn" id="2"]
@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://co8bwstg3ea6x" path="res://level/props/rock_1.webp" id="17"]
 [ext_resource type="Material" uid="uid://djwm5nol3d801" path="res://level/props/wind_sway.tres" id="18"]
 [ext_resource type="Texture2D" uid="uid://c5xpotfxdi0ms" path="res://level/props/fern_1.webp" id="19"]
-[ext_resource type="PackedScene" uid="uid://ce3pnjiu7ouyg" path="res://level/portal/portal.tscn" id="19_bg6rw"]
 [ext_resource type="Texture2D" uid="uid://crfy1osk1c1gc" path="res://level/props/ground_flowers_1.webp" id="20"]
 [ext_resource type="Texture2D" uid="uid://bvu4vgnc84r84" path="res://level/props/vine_1.webp" id="21"]
 [ext_resource type="Texture2D" uid="uid://bu54lwrkcng25" path="res://level/props/vine_2.webp" id="22"]
@@ -1255,10 +1254,6 @@ polygon = PackedVector2Array(-170.838, 7.9798, -90.8381, -15.201, 95.0401, -20.2
 z_index = 2
 position = Vector2(544, 355)
 
-[node name="Enemy3" parent="Enemies" instance=ExtResource("2")]
-z_index = 2
-position = Vector2(492, 610)
-
 [node name="Enemy4" parent="Enemies" instance=ExtResource("2")]
 z_index = 2
 position = Vector2(395, 53)
@@ -1646,6 +1641,3 @@ z_index = -2
 position = Vector2(72, 639)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("17")
-
-[node name="Portal" parent="." instance=ExtResource("19_bg6rw")]
-position = Vector2(760, 586)

@@ -16,7 +16,6 @@ var gravity: int = ProjectSettings.get("physics/2d/default_gravity")
 
 
 func _physics_process(delta: float) -> void:
-	
 	if player.stunned:
 		return
 	handle_vertical_movement(delta)

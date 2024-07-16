@@ -1,18 +1,28 @@
 class_name HookMovement extends RegularMovement
 
 @onready var hook = preload("res://perks/mobility/hook/hook_pivot.tscn")
+@onready var h = hook.instantiate()
+
+var hooked = false
+var hooked_pos = Vector2(0,0)
+var radius = 0.0
+var speed = 1.0
+var angle = 0.0
 
 func _ready():
-	var h = hook.instantiate()
 	player.add_child(h)
 	h.get_node("Sprite2D").hooked.connect(_on_sprite_2d_hooked)
+	h.get_node("Sprite2D").unhooked.connect(_return_gravity)
 
 func _physics_process(delta: float) -> void:
-	handle_vertical_movement(delta)
-	
-	handle_graple(delta)
+	if player.stunned:
+		return
 
-	handle_horizontal_movement(delta)
+	player.velocity.y = minf(TERMINAL_VELOCITY, player.velocity.y + gravity*delta)
+
+	if hooked:
+		radius = h.get_child(0).distance
+		circular_motion()
 
 	if not is_zero_approx(player.velocity.x):
 		if player.velocity.x > 0.0:
@@ -21,9 +31,19 @@ func _physics_process(delta: float) -> void:
 			sprite.scale.x = -1.0
 	player.move_and_slide()
 
-func handle_graple(delta:float) -> void:
-	pass
-
 func _on_sprite_2d_hooked(hooked_position):
-	var tween = get_tree().create_tween()
-	tween.tween_property(player, "position", hooked_position, 0.3)
+	gravity = 0
+	player.velocity.y = 0
+	hooked = true
+	hooked_pos = hooked_position
+
+func _return_gravity():
+	gravity = ProjectSettings.get("physics/2d/default_gravity")
+	hooked = false
+	
+func circular_motion():
+	angle = (player.position-hooked_pos).angle()
+	angle += speed * get_process_delta_time()
+	var new_pos = Vector2(cos(angle),sin(angle)) * radius + hooked_pos
+	
+	player.velocity = (new_pos - player.global_position).normalized()*700
