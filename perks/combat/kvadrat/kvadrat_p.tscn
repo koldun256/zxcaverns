@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2w3so2ikdg62"]
+
+[ext_resource type="Script" path="res://perks/combat/kvadrat/kvadrat_p.gd" id="1_y55t6"]
+[ext_resource type="Texture2D" uid="uid://ce1wbbfron5o5" path="res://perks/combat/kvadrat/icon.png" id="2_wqicg"]
+
+[node name="KvadratPerk" type="Node"]
+script = ExtResource("1_y55t6")
+icon = ExtResource("2_wqicg")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bf3wnwihk7ymg"]
+[gd_scene load_steps=16 format=3 uid="uid://bf3wnwihk7ymg"]
 
 [ext_resource type="Script" path="res://game.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://ctgumjaytuoch" path="res://level/level.tscn" id="3"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cootnren37mla" path="res://perks/mobility/run/run_p.tscn" id="9_5q33u"]
 [ext_resource type="PackedScene" uid="uid://bw3bwe5r7w7w" path="res://perks/mobility/walk/walk_p.tscn" id="10_i5jl7"]
 [ext_resource type="PackedScene" uid="uid://c8h6nq2hp123" path="res://perks/combat/sword/sword_p.tscn" id="14_nfndy"]
+[ext_resource type="PackedScene" uid="uid://c2w3so2ikdg62" path="res://perks/combat/kvadrat/kvadrat_p.tscn" id="15_a328g"]
 
 [node name="Game" type="Node"]
 process_mode = 3
@@ -38,6 +39,6 @@ offset_bottom = -15.0
 [node name="Perks" type="Node" parent="."]
 script = ExtResource("5_ohdjd")
 mobility_perks = Array[PackedScene]([ExtResource("6_nfc52"), ExtResource("7_t3vav"), ExtResource("5_t5q8d"), ExtResource("9_5q33u"), ExtResource("10_i5jl7")])
-combat_perks = Array[PackedScene]([ExtResource("6_m6umw"), ExtResource("6_adunn"), ExtResource("14_nfndy")])
+combat_perks = Array[PackedScene]([ExtResource("6_m6umw"), ExtResource("6_adunn"), ExtResource("14_nfndy"), ExtResource("15_a328g")])
 
 [connection signal="on_set_perks" from="Perks" to="InterfaceLayer/PerksUI" method="_on_perks_on_set_perks"]
