@@ -29,6 +29,9 @@ layer = 100
 
 [node name="Fly" type="Node" parent="Perks"]
 
+[node name="Megadash" type="Node" parent="Perks"]
+script = ExtResource("5_xnq01")
+
 [node name="SuperRegular" type="Node" parent="Perks"]
 script = ExtResource("5_s4rxe")
 
