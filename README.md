@@ -39,6 +39,10 @@ clock - makes enemy return to his initial place, then dissolves(broken)
 
 falling piano
 
+death square
+
+pacman or smth - u seek smth then kill enemys
+
 ## mobility
 	
 harpoon
@@ -55,19 +59,21 @@ super speed + infinite jumps
 
 gravity change
 
-gracity rotation
+racist car
 
 drag n drop
 
-only jumps
+snake
 
 flying
-
-long/chargeble dash
 
 1-9 teleportation
 
 floor is lava infinite jumps
+
+chained delayed teleport
+
+terraria chain hook
 
 # level design
 
