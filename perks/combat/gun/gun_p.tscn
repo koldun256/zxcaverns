@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwnpl8qvfoghr"]
+[gd_scene load_steps=3 format=3 uid="uid://c67yxj2l3uaed"]
 
 [ext_resource type="Script" path="res://perks/combat/gun/gun_p.gd" id="1_86fok"]
 [ext_resource type="Texture2D" uid="uid://6ts3lp1gvyig" path="res://perks/combat/gun/icon.png" id="2_uw1nr"]

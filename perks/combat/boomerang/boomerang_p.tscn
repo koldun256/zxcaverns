@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxjkwqtrvi5cl"]
+
+[ext_resource type="Script" path="res://perks/combat/boomerang/boomerang_p.gd" id="1_gmrm2"]
+
+[node name="BoomerangP" type="Node"]
+script = ExtResource("1_gmrm2")

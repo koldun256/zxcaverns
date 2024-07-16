@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1knh5x04v2w"]
+
+[ext_resource type="Script" path="res://perks/combat/boomerang/boomerang_projectile.gd" id="1_hlquf"]
+[ext_resource type="Texture2D" uid="uid://foclsqhxh42m" path="res://perks/combat/boomerang/boomerang_projectile.png" id="2_2lq68"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sijlk"]
+
+[node name="BoomerangProjectile" type="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 3
+script = ExtResource("1_hlquf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_sijlk")
+one_way_collision_margin = 15.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 1)
+scale = Vector2(0.0222222, 0.0236876)
+texture = ExtResource("2_2lq68")
