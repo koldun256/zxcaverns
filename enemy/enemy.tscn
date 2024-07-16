@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://6mtip3ruyn"]
+[gd_scene load_steps=17 format=3 uid="uid://6mtip3ruyn"]
 
 [ext_resource type="AudioStream" uid="uid://duwm7i44o75o2" path="res://enemy/explode.wav" id="2"]
 [ext_resource type="AudioStream" uid="uid://dm7wsawmylc7b" path="res://enemy/hit.wav" id="3"]
 [ext_resource type="Texture2D" uid="uid://bjjywmvba0sve" path="res://enemy/enemy.webp" id="4"]
 [ext_resource type="Script" path="res://enemy/enemy.gd" id="5"]
+[ext_resource type="Script" path="res://enemy/smert.gd" id="5_ekm3v"]
 
 [sub_resource type="CanvasItemMaterial" id="1"]
 
@@ -250,9 +251,13 @@ load_path = "res://.godot/imported/bullet.webp-afcd8f50a20e81f25285b6f580e633e3.
 offsets = PackedFloat32Array(0.5, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eq3gu"]
+radius = 22.0
+height = 62.0
+
 [node name="Enemy" type="CharacterBody2D"]
 collision_layer = 2
-collision_mask = 24
+collision_mask = 25
 script = ExtResource("5")
 
 [node name="PlatformDetector" type="RayCast2D" parent="."]
@@ -309,3 +314,13 @@ stream = ExtResource("3")
 
 [node name="Explode" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+script = ExtResource("5_ekm3v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_eq3gu")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

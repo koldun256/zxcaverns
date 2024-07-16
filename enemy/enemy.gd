@@ -40,7 +40,11 @@ func _physics_process(delta: float) -> void:
 	var animation := get_new_animation()
 	if animation != animation_player.current_animation:
 		animation_player.play(animation)
-
+		
+	for i in get_slide_collision_count():
+		var other = get_slide_collision(i).get_collider()
+		if other is Player:
+			(other as Player).die()
 
 func destroy() -> void:
 	_state = State.DEAD

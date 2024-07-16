@@ -10,7 +10,7 @@ func get_level():
 	return $Level as Node
 
 func restart():
-	get_tree().reload_current_scene()
+	get_tree().call_deferred("reload_current_scene")
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"toggle_fullscreen"):
