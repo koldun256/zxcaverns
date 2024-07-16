@@ -3,8 +3,9 @@
 [ext_resource type="Script" path="res://player/player.gd" id="3"]
 [ext_resource type="Texture2D" uid="uid://cc7o7t0ramd6y" path="res://player/robot.webp" id="9"]
 
-[sub_resource type="RectangleShape2D" id="11"]
-size = Vector2(42.5, 54.5)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mo8qy"]
+radius = 13.75
+height = 55.0
 
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(0.8, 0.8)
@@ -28,5 +29,5 @@ limit_right = 1425
 limit_bottom = 690
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -14)
-shape = SubResource("11")
+position = Vector2(0, -18.75)
+shape = SubResource("CapsuleShape2D_mo8qy")
