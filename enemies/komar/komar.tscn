@@ -1,0 +1,205 @@
+[gd_scene load_steps=13 format=3 uid="uid://dmlf2wxl84uot"]
+
+[ext_resource type="Script" path="res://enemies/komar/komar.gd" id="1_c7ji6"]
+[ext_resource type="Texture2D" uid="uid://drbmfl1p1cwo0" path="res://enemies/komar/komar.png" id="2_abucc"]
+[ext_resource type="Script" path="res://enemies/smert.gd" id="5_kvrop"]
+
+[sub_resource type="CanvasItemMaterial" id="1"]
+
+[sub_resource type="Animation" id="8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:collision_layer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="Animation" id="2"]
+resource_name = "destroy"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(0.0796601, 1),
+"update": 0,
+"values": [0.0, 180.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:collision_layer")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sprite2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(2.2974, 0.183011, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -32), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="3"]
+length = 3.0
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.333, 0.666, 0.999, 1.332, 1.665, 1.998, 2.331, 2.664, 2.997),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [5, 6, 5, 6, 5, 6, 7, 6, 7, 5]
+}
+
+[sub_resource type="Animation" id="4"]
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.062475, 0.12495, 0.187425, 0.2499, 0.312375, 0.37485, 0.437325, 0.4998, 0.562275, 0.62475, 0.687225, 0.7497, 0.812175, 0.87465, 0.937125),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0kjfc"]
+_data = {
+"RESET": SubResource("8"),
+"destroy": SubResource("2"),
+"idle": SubResource("3"),
+"walk": SubResource("4")
+}
+
+[sub_resource type="CapsuleShape2D" id="5"]
+radius = 11.0
+height = 22.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eq3gu"]
+radius = 14.0
+height = 28.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_65etr"]
+radius = 142.0
+
+[node name="Komar" type="CharacterBody2D" groups=["Enemy"]]
+collision_layer = 2
+collision_mask = 25
+script = ExtResource("1_c7ji6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("1")
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_abucc")
+flip_h = true
+hframes = 10
+vframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0kjfc")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = -1.5708
+shape = SubResource("5")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+script = ExtResource("5_kvrop")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_eq3gu")
+
+[node name="PatrolTimer" type="Timer" parent="."]
+
+[node name="PatrolArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PatrolArea"]
+shape = SubResource("CircleShape2D_65etr")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="timeout" from="PatrolTimer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="PatrolArea" to="." method="_on_DetectionArea_body_entered"]
+[connection signal="body_exited" from="PatrolArea" to="." method="_on_DetectionArea_body_exited"]

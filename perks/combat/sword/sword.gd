@@ -22,5 +22,5 @@ func _process(delta):
 		hide_weapon()
 
 func _on_body_entered(body):
-	if body is Enemy:
-		(body as Enemy).destroy()
+	if body.is_in_group('Enemy'):
+		body.destroy()

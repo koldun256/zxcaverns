@@ -1,10 +1,10 @@
 [gd_scene load_steps=17 format=3 uid="uid://6mtip3ruyn"]
 
-[ext_resource type="AudioStream" uid="uid://duwm7i44o75o2" path="res://enemy/explode.wav" id="2"]
-[ext_resource type="AudioStream" uid="uid://dm7wsawmylc7b" path="res://enemy/hit.wav" id="3"]
-[ext_resource type="Texture2D" uid="uid://bjjywmvba0sve" path="res://enemy/enemy.webp" id="4"]
-[ext_resource type="Script" path="res://enemy/enemy.gd" id="5"]
-[ext_resource type="Script" path="res://enemy/smert.gd" id="5_ekm3v"]
+[ext_resource type="Script" path="res://enemies/chinchopa/chinchopa.gd" id="1_6hn27"]
+[ext_resource type="Texture2D" uid="uid://bjjywmvba0sve" path="res://enemies/chinchopa/chinchopa.webp" id="2_h6qyv"]
+[ext_resource type="AudioStream" uid="uid://dm7wsawmylc7b" path="res://enemies/chinchopa/hit.wav" id="3_3w7nm"]
+[ext_resource type="AudioStream" uid="uid://duwm7i44o75o2" path="res://enemies/chinchopa/explode.wav" id="4_fifm6"]
+[ext_resource type="Script" path="res://enemies/smert.gd" id="5_cfm2m"]
 
 [sub_resource type="CanvasItemMaterial" id="1"]
 
@@ -255,10 +255,10 @@ colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 radius = 22.0
 height = 62.0
 
-[node name="Enemy" type="CharacterBody2D"]
+[node name="Chinchopa" type="CharacterBody2D" groups=["Enemy"]]
 collision_layer = 2
 collision_mask = 25
-script = ExtResource("5")
+script = ExtResource("1_6hn27")
 
 [node name="PlatformDetector" type="RayCast2D" parent="."]
 position = Vector2(0, 6)
@@ -278,7 +278,7 @@ collision_mask = 24
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("1")
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("4")
+texture = ExtResource("2_h6qyv")
 flip_h = true
 hframes = 8
 vframes = 2
@@ -310,14 +310,14 @@ gravity = Vector2(0, -250)
 color_ramp = SubResource("7")
 
 [node name="Hit" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3")
+stream = ExtResource("3_3w7nm")
 
 [node name="Explode" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2")
+stream = ExtResource("4_fifm6")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0
-script = ExtResource("5_ekm3v")
+script = ExtResource("5_cfm2m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 rotation = 1.5708

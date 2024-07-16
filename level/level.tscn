@@ -1,7 +1,7 @@
-[gd_scene load_steps=24 format=3 uid="uid://ctgumjaytuoch"]
+[gd_scene load_steps=25 format=3 uid="uid://ctgumjaytuoch"]
 
 [ext_resource type="TileSet" uid="uid://08mkofgbxx70" path="res://level/tileset.tres" id="1"]
-[ext_resource type="PackedScene" uid="uid://6mtip3ruyn" path="res://enemy/enemy.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://6mtip3ruyn" path="res://enemies/chinchopa/chinchopa.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://cky6e5nl0nyod" path="res://level/platforms/platform.tscn" id="3"]
 [ext_resource type="Texture2D" uid="uid://bxsmiv7k3fngt" path="res://level/platforms/moving_platform.webp" id="6"]
 [ext_resource type="PackedScene" uid="uid://cw6nldo3rjyyq" path="res://level/background/parallax_background.tscn" id="7"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://c5xpotfxdi0ms" path="res://level/props/fern_1.webp" id="19"]
 [ext_resource type="PackedScene" uid="uid://ce3pnjiu7ouyg" path="res://level/portal/portal.tscn" id="19_bg6rw"]
 [ext_resource type="Texture2D" uid="uid://crfy1osk1c1gc" path="res://level/props/ground_flowers_1.webp" id="20"]
+[ext_resource type="PackedScene" uid="uid://dmlf2wxl84uot" path="res://enemies/komar/komar.tscn" id="20_ay55g"]
 [ext_resource type="Texture2D" uid="uid://bvu4vgnc84r84" path="res://level/props/vine_1.webp" id="21"]
 [ext_resource type="Texture2D" uid="uid://bu54lwrkcng25" path="res://level/props/vine_2.webp" id="22"]
 
@@ -1649,3 +1650,9 @@ texture = ExtResource("17")
 
 [node name="Portal" parent="." instance=ExtResource("19_bg6rw")]
 position = Vector2(760, 586)
+
+[node name="Komar" parent="." instance=ExtResource("20_ay55g")]
+position = Vector2(-349, 197)
+
+[node name="Komar2" parent="." instance=ExtResource("20_ay55g")]
+position = Vector2(745, 60)
