@@ -5,5 +5,4 @@
 
 [node name="MegadashPerk" type="Node"]
 script = ExtResource("1_6jhqh")
-action_suffix = null
 icon = ExtResource("2_siuyq")
