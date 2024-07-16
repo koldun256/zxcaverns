@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8354bxy3equ6"]
+
+[ext_resource type="Script" path="res://perks/combat/gun/gun.gd" id="1_jqiau"]
+
+[node name="Gun" type="Node2D"]
+script = ExtResource("1_jqiau")
