@@ -24,4 +24,3 @@ func _process(delta):
 func _on_body_entered(body):
 	if body is Enemy:
 		(body as Enemy).destroy()
-	queue_free()
