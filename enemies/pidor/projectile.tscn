@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsinnurkuaj3v"]
+
+[ext_resource type="Script" path="res://enemies/pidor/projectile.gd" id="1_tpf7g"]
+[ext_resource type="Texture2D" uid="uid://c64sucwudquet" path="res://enemies/pidor/projectile.jpg" id="1_vqr06"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8u6vc"]
+radius = 7.81025
+
+[node name="Projectile" type="CharacterBody2D"]
+collision_layer = 0
+script = ExtResource("1_tpf7g")
+
+[node name="Projectile" type="Sprite2D" parent="."]
+position = Vector2(0.498321, -1.24408)
+rotation = 0.523599
+scale = Vector2(0.0167394, 0.0165535)
+texture = ExtResource("1_vqr06")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8u6vc")

@@ -37,6 +37,15 @@ window/stretch/mode="canvas_items"
 window/stretch/aspect="keep_height"
 window/stretch/scale_mode="integer"
 
+[file_customization]
+
+folder_colors={
+"res://enemies/pidor/": "pink",
+"res://gui/": "yellow",
+"res://level/": "green",
+"res://perks/": "blue"
+}
+
 [importer_defaults]
 
 texture={

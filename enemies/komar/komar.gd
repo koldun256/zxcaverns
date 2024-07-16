@@ -45,5 +45,4 @@ func _on_DetectionArea_body_exited(body):
 		is_player_detected = false
 
 func _on_timer_timeout():
-	print('timer')
 	patrol_direction = randi() % 2 * 2 - 1

@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://4ibk7hkjks8k"]
+
+[ext_resource type="Script" path="res://enemies/pidor/pidor.gd" id="1_3n1rk"]
+[ext_resource type="Texture2D" uid="uid://c6173h487g5xv" path="res://enemies/pidor/pidor.jpg" id="2_vypp5"]
+[ext_resource type="Script" path="res://enemies/smert.gd" id="3_88ir8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fg46w"]
+radius = 31.7805
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nr7wr"]
+radius = 38.6394
+
+[node name="Pidor" type="CharacterBody2D" groups=["Enemy"]]
+collision_layer = 2
+collision_mask = 28
+script = ExtResource("1_3n1rk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.113451, 0.113451)
+texture = ExtResource("2_vypp5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_fg46w")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_88ir8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_nr7wr")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+collision_mask = 27
+collide_with_areas = true

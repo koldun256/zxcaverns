@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://ctgumjaytuoch"]
+[gd_scene load_steps=26 format=3 uid="uid://ctgumjaytuoch"]
 
 [ext_resource type="TileSet" uid="uid://08mkofgbxx70" path="res://level/tileset.tres" id="1"]
 [ext_resource type="PackedScene" uid="uid://6mtip3ruyn" path="res://enemies/chinchopa/chinchopa.tscn" id="2"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bju7r7jqn8bqy" path="res://level/props/grass_2.webp" id="12"]
 [ext_resource type="Texture2D" uid="uid://upfcr5xg5fvh" path="res://level/props/grass_3.webp" id="13"]
 [ext_resource type="Texture2D" uid="uid://icddaryasunc" path="res://level/props/tree_1.webp" id="14"]
+[ext_resource type="PackedScene" uid="uid://4ibk7hkjks8k" path="res://enemies/pidor/pidor.tscn" id="14_sj4ya"]
 [ext_resource type="Texture2D" uid="uid://dea1a76o6b0ix" path="res://level/props/tree_2.webp" id="15"]
 [ext_resource type="Texture2D" uid="uid://cqydct6vajobg" path="res://level/props/bush_1.webp" id="16"]
 [ext_resource type="Texture2D" uid="uid://co8bwstg3ea6x" path="res://level/props/rock_1.webp" id="17"]
@@ -1256,13 +1257,12 @@ polygon = PackedVector2Array(-170.838, 7.9798, -90.8381, -15.201, 95.0401, -20.2
 z_index = 2
 position = Vector2(544, 355)
 
-[node name="Enemy3" parent="Enemies" instance=ExtResource("2")]
-z_index = 2
-position = Vector2(492, 610)
-
 [node name="Enemy4" parent="Enemies" instance=ExtResource("2")]
 z_index = 2
 position = Vector2(395, 53)
+
+[node name="Pidor" parent="Enemies" instance=ExtResource("14_sj4ya")]
+position = Vector2(629, 594)
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("7")]
 

@@ -8,7 +8,7 @@ func _physics_process(delta):
 	for i in get_slide_collision_count():
 		var other = get_slide_collision(i).get_collider()
 		if other.is_in_group('Enemy'):
-			other.destroy()
+			other.queue_free()
 	
 	if get_slide_collision_count() > 0:
 		queue_free()
