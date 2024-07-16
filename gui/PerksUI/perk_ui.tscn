@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyb5c2lusjvv3"]
+
+[ext_resource type="Texture2D" uid="uid://6ts3lp1gvyig" path="res://perks/combat/gun/icon.png" id="1_m3pge"]
+
+[node name="PerkUI" type="TextureRect"]
+texture = ExtResource("1_m3pge")

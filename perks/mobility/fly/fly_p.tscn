@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://l6o2fr26b3ph"]
 
 [ext_resource type="Script" path="res://perks/mobility/fly/fly_p.gd" id="1_8ry4i"]
-[ext_resource type="Texture2D" uid="uid://csfewagtowg6m" path="res://perks/mobility/fly/icon.webp" id="2_5660s"]
+[ext_resource type="Texture2D" uid="uid://bj06eqhpaoyn1" path="res://perks/mobility/fly/icon.png" id="2_lpmuk"]
 
 [node name="FlyPerk" type="Node"]
 script = ExtResource("1_8ry4i")
 action_suffix = null
-icon = ExtResource("2_5660s")
+icon = ExtResource("2_lpmuk")

@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://bf3wnwihk7ymg"]
+[gd_scene load_steps=14 format=3 uid="uid://bf3wnwihk7ymg"]
 
 [ext_resource type="Script" path="res://game.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://ctgumjaytuoch" path="res://level/level.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://vh7pmputa7r3" path="res://player/player.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://b7tn56m3tpoxm" path="res://gui/pause_menu_singleplayer.tscn" id="4_x6l06"]
-[ext_resource type="Script" path="res://perks_manager.gd" id="5_ohdjd"]
+[ext_resource type="PackedScene" uid="uid://b41rjv0pfh6uc" path="res://gui/PerksUI/perks_ui.tscn" id="5_8ye8h"]
+[ext_resource type="Script" path="res://perks/perks_manager.gd" id="5_ohdjd"]
 [ext_resource type="PackedScene" uid="uid://bdsn8bis1outv" path="res://perks/mobility/megadash/megadash_p.tscn" id="5_t5q8d"]
 [ext_resource type="PackedScene" uid="uid://cwnpl8qvfoghr" path="res://perks/combat/gun/gun_p.tscn" id="6_adunn"]
 [ext_resource type="PackedScene" uid="uid://co8yuptqtpaq8" path="res://perks/combat/sword/sword_p.tscn" id="6_m6umw"]
@@ -26,8 +27,16 @@ position = Vector2(90, 546)
 layer = 100
 
 [node name="PauseMenu" parent="InterfaceLayer" instance=ExtResource("4_x6l06")]
+offset_left = 50.0
+offset_top = -15.0
+offset_right = 50.0
+offset_bottom = -15.0
+
+[node name="PerksUI" parent="InterfaceLayer" instance=ExtResource("5_8ye8h")]
 
 [node name="Perks" type="Node" parent="."]
 script = ExtResource("5_ohdjd")
 mobility_perks = Array[PackedScene]([ExtResource("6_nfc52"), ExtResource("7_t3vav"), ExtResource("5_t5q8d"), ExtResource("9_5q33u"), ExtResource("10_i5jl7")])
 combat_perks = Array[PackedScene]([ExtResource("6_m6umw"), ExtResource("6_adunn")])
+
+[connection signal="on_set_perks" from="Perks" to="InterfaceLayer/PerksUI" method="_on_perks_on_set_perks"]

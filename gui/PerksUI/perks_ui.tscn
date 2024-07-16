@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b41rjv0pfh6uc"]
+
+[ext_resource type="Script" path="res://gui/PerksUI/perks_ui.gd" id="1_pekp2"]
+
+[node name="PerksUI" type="HBoxContainer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = -77.0
+offset_right = 374.0
+offset_bottom = -13.0
+script = ExtResource("1_pekp2")
