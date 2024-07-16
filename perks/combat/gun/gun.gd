@@ -1,4 +1,4 @@
-extends Node
+class_name Gun extends Node2D
 
 @onready var bullet_scene = preload("res://perks/combat/gun/bullet.tscn")
 @onready var player = get_parent() as Player
@@ -8,5 +8,5 @@ func _process(delta):
 		print('bullet')
 		var bullet = bullet_scene.instantiate()
 		player.get_parent().add_child(bullet)
-		bullet.position = player.position
+		bullet.global_position = global_position
 		bullet.velocity = (player.get_global_mouse_position() - player.position).normalized() * BULLET_SPEED
