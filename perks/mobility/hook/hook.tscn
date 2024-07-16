@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://chs2su87dju8o"]
+
+[ext_resource type="Script" path="res://perks/mobility/hook/hook.gd" id="1_5b2uk"]
+[ext_resource type="Texture2D" uid="uid://mdqx0xb44f1o" path="res://Снимок экрана 2024-01-21 001111.png" id="1_tcbyb"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture_repeat = 2
+position = Vector2(6.69334, -1.68502)
+rotation = -1.5708
+scale = Vector2(0.112599, 1.28211)
+texture = ExtResource("1_tcbyb")
+region_enabled = true
+region_rect = Rect2(120, 200, 50, 80)
+script = ExtResource("1_5b2uk")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, 200)
+collision_mask = 31
+collide_with_areas = true
