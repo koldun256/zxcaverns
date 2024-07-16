@@ -1,4 +1,4 @@
-class_name SuperRegular extends RegularMovement
+class_name RunPerk extends WalkPerk
 
 var number_of_jumps = 4
 

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bw3bwe5r7w7w"]
+
+[ext_resource type="Script" path="res://perks/mobility/walk/walk_p.gd" id="1_ei7gd"]
+[ext_resource type="Texture2D" uid="uid://ba53gs6ubhdr7" path="res://perks/mobility/walk/icon.png" id="2_48qdv"]
+
+[node name="WalkPerk" type="Node"]
+script = ExtResource("1_ei7gd")
+icon = ExtResource("2_48qdv")

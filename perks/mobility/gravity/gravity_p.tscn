@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://db0opax3vd478"]
+
+[ext_resource type="Script" path="res://perks/mobility/gravity/gravity_p.gd" id="1_i4ex0"]
+[ext_resource type="Texture2D" uid="uid://c6tha0pljq8fd" path="res://perks/mobility/gravity/icon.png" id="2_p66wo"]
+
+[node name="GravityPerk" type="Node"]
+script = ExtResource("1_i4ex0")
+action_suffix = null
+icon = ExtResource("2_p66wo")

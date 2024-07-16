@@ -1,4 +1,4 @@
-class_name Megadash extends RegularMovement
+class_name MegadashPerk extends WalkPerk
 
 var in_charge = false
 var charge_time = 0
@@ -17,7 +17,7 @@ func _physics_process(delta: float) -> void:
 		player.velocity = ((target - player.get_position())).normalized()*3000
 		if (target - start).dot(target - player.get_position()) < 0 or charge_time < 0:
 			in_charge = false
-			player.velocity = Vector2.ZERO	
+			player.velocity = Vector2.ZERO
 	else:
 		handle_vertical_movement(delta)
 		handle_horizontal_movement(delta)

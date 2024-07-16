@@ -1,11 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://j0dth7kay68w"]
+[gd_scene load_steps=5 format=3 uid="uid://j0dth7kay68w"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_rd1bw"]
 [ext_resource type="PackedScene" uid="uid://ctgumjaytuoch" path="res://level/level.tscn" id="2_rmllk"]
 [ext_resource type="PackedScene" uid="uid://vh7pmputa7r3" path="res://player/player.tscn" id="3_5411t"]
 [ext_resource type="PackedScene" uid="uid://dh71g61cm8k44" path="res://gui/pause_menu.tscn" id="4_okon0"]
-[ext_resource type="Script" path="res://perks/mobility/super_regular.gd" id="5_ocnj1"]
-[ext_resource type="Script" path="res://perks/combat/sword/sword_perk.gd" id="6_bcf1v"]
 
 [node name="Game" type="Node"]
 process_mode = 3
@@ -22,15 +20,3 @@ layer = 100
 [node name="PauseMenu" parent="InterfaceLayer" instance=ExtResource("4_okon0")]
 
 [node name="Perks" type="Node" parent="."]
-
-[node name="RegularMovement" type="Node" parent="Perks"]
-
-[node name="ReverseGravity" type="Node" parent="Perks"]
-
-[node name="Fly" type="Node" parent="Perks"]
-
-[node name="SuperRegular" type="Node" parent="Perks"]
-script = ExtResource("5_ocnj1")
-
-[node name="SwordPerk" type="Node" parent="Perks"]
-script = ExtResource("6_bcf1v")

@@ -1,4 +1,4 @@
-class_name Weapon extends Area2D
+class_name Sword extends Area2D
 
 var SHOW_TIME = 1.0
 var cur_time = 0

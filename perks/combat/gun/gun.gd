@@ -5,7 +5,6 @@ class_name Gun extends Node2D
 var BULLET_SPEED = 1000
 func _process(delta):
 	if Input.is_action_just_pressed("attack"):
-		print('bullet')
 		var bullet = bullet_scene.instantiate()
 		player.get_parent().add_child(bullet)
 		bullet.global_position = global_position

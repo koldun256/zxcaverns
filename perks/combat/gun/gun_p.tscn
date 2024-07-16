@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwnpl8qvfoghr"]
+
+[ext_resource type="Script" path="res://perks/combat/gun/gun_p.gd" id="1_86fok"]
+[ext_resource type="Texture2D" uid="uid://6ts3lp1gvyig" path="res://perks/combat/gun/icon.png" id="2_uw1nr"]
+
+[node name="GunPerk" type="Node"]
+script = ExtResource("1_86fok")
+icon = ExtResource("2_uw1nr")

@@ -1,5 +1,4 @@
-
-class_name ReverseGravity extends RegularMovement
+class_name GravityPerk extends WalkPerk
 
 func handle_vertical_movement(delta: float, _gravity = gravity) -> void:
 	if Input.is_action_just_pressed("jump"):

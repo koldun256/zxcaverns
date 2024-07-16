@@ -1,6 +1,4 @@
-
-class_name RegularMovement extends Perk
-
+class_name WalkPerk extends Perk
 
 const WALK_SPEED = 300.0
 const ACCELERATION_SPEED = WALK_SPEED * 6.0

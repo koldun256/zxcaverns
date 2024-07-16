@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cootnren37mla"]
+
+[ext_resource type="Script" path="res://perks/mobility/run/run_p.gd" id="1_68ia7"]
+[ext_resource type="Texture2D" uid="uid://bw6q1appj1i3m" path="res://perks/mobility/run/icon.png" id="2_6ints"]
+
+[node name="RunPerk" type="Node"]
+script = ExtResource("1_68ia7")
+action_suffix = null
+icon = ExtResource("2_6ints")

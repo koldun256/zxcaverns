@@ -1,4 +1,4 @@
-class_name Fly extends RegularMovement
+class_name FlyPerk extends WalkPerk
 
 const FlY_SPEED = WALK_SPEED
 

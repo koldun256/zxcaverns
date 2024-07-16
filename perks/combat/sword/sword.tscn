@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://8nio38s8wbyj"]
 
-[ext_resource type="Script" path="res://perks/combat/sword/Weapon.gd" id="1_sv2gj"]
+[ext_resource type="Script" path="res://perks/combat/sword/sword.gd" id="1_mh5im"]
 [ext_resource type="Texture2D" uid="uid://w8ds8f0e3e0n" path="res://perks/combat/sword/melee-swing.png" id="2_dwk2s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vxlpw"]
@@ -10,7 +10,7 @@ size = Vector2(28.75, 41.25)
 position = Vector2(0, -12.5)
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("1_sv2gj")
+script = ExtResource("1_mh5im")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(34.375, -1.87501)
