@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bf3wnwihk7ymg"]
+[gd_scene load_steps=15 format=3 uid="uid://bf3wnwihk7ymg"]
 
 [ext_resource type="Script" path="res://game.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://ctgumjaytuoch" path="res://level/level.tscn" id="3"]
@@ -8,11 +8,12 @@
 [ext_resource type="Script" path="res://perks/perks_manager.gd" id="5_ohdjd"]
 [ext_resource type="PackedScene" uid="uid://bdsn8bis1outv" path="res://perks/mobility/megadash/megadash_p.tscn" id="5_t5q8d"]
 [ext_resource type="PackedScene" uid="uid://cwnpl8qvfoghr" path="res://perks/combat/gun/gun_p.tscn" id="6_adunn"]
-[ext_resource type="PackedScene" uid="uid://co8yuptqtpaq8" path="res://perks/combat/sword/sword_p.tscn" id="6_m6umw"]
+[ext_resource type="PackedScene" uid="uid://co8yuptqtpaq8" path="res://perks/combat/static_trap/static_trap_p.tscn" id="6_m6umw"]
 [ext_resource type="PackedScene" uid="uid://l6o2fr26b3ph" path="res://perks/mobility/fly/fly_p.tscn" id="6_nfc52"]
 [ext_resource type="PackedScene" uid="uid://db0opax3vd478" path="res://perks/mobility/gravity/gravity_p.tscn" id="7_t3vav"]
 [ext_resource type="PackedScene" uid="uid://cootnren37mla" path="res://perks/mobility/run/run_p.tscn" id="9_5q33u"]
 [ext_resource type="PackedScene" uid="uid://bw3bwe5r7w7w" path="res://perks/mobility/walk/walk_p.tscn" id="10_i5jl7"]
+[ext_resource type="PackedScene" uid="uid://c8h6nq2hp123" path="res://perks/combat/sword/sword_p.tscn" id="14_nfndy"]
 
 [node name="Game" type="Node"]
 process_mode = 3
@@ -37,6 +38,6 @@ offset_bottom = -15.0
 [node name="Perks" type="Node" parent="."]
 script = ExtResource("5_ohdjd")
 mobility_perks = Array[PackedScene]([ExtResource("6_nfc52"), ExtResource("7_t3vav"), ExtResource("5_t5q8d"), ExtResource("9_5q33u"), ExtResource("10_i5jl7")])
-combat_perks = Array[PackedScene]([ExtResource("6_m6umw"), ExtResource("6_adunn")])
+combat_perks = Array[PackedScene]([ExtResource("6_m6umw"), ExtResource("6_adunn"), ExtResource("14_nfndy")])
 
 [connection signal="on_set_perks" from="Perks" to="InterfaceLayer/PerksUI" method="_on_perks_on_set_perks"]
