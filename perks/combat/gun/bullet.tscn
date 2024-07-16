@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://mnnryg8rl0dr"]
+
+[ext_resource type="Script" path="res://perks/combat/gun/bullet.gd" id="1_n2lpr"]
+[ext_resource type="Texture2D" uid="uid://26idnnyu76v1" path="res://perks/combat/gun/bullet.jpg" id="2_dlrfo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u783h"]
+radius = 5.0
+
+[node name="Bullet" type="CharacterBody2D"]
+collision_layer = 32
+collision_mask = 30
+script = ExtResource("1_n2lpr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.00667243, 0.00667243)
+texture = ExtResource("2_dlrfo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_u783h")
