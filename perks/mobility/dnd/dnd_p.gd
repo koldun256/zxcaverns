@@ -1,5 +1,6 @@
 class_name DndPerk extends Perk
 
+var gravity: int = ProjectSettings.get("physics/2d/default_gravity")
 var mouse_on_player = false
 @onready var game = get_tree().get_root().get_node("Game")
 @onready var player = game.get_player()
@@ -7,13 +8,14 @@ var mouse_on_player = false
 @onready var camera = player.get_node("Camera") as Camera2D
 var camera_pivot: Node2D
 var dragging = false
-var DRAG_DURATION = 1.5
-var DRAG_CD = 1.0
+var DRAG_DURATION = 1.0
+var DRAG_CD = 0.3
 
 var drag_cd = 0
 var drag_duration = 0
 
 func start_drag():
+	print('start drag')
 	camera_pivot = Node2D.new()
 	level.add_child(camera_pivot)
 	camera_pivot.global_position = player.global_position
@@ -25,6 +27,7 @@ func start_drag():
 	drag_duration = 0
 
 func end_drag():
+	print('end drag')
 	camera_pivot.remove_child(camera)
 	player.add_child(camera)
 	camera_pivot.queue_free()
@@ -44,7 +47,7 @@ func _ready():
 	
 func _physics_process(delta):
 	drag_cd = max(0, drag_cd - delta)
-	var pressed = Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)
+	var pressed = Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT)
 	
 	if not dragging and pressed and mouse_on_player and drag_cd == 0:
 		start_drag()
@@ -55,9 +58,14 @@ func _physics_process(delta):
 	if dragging:
 		drag_duration += delta
 		move_to(player.get_global_mouse_position())
+	else:
+		player.velocity.x *= 0.98
+		player.velocity += Vector2.DOWN * gravity * delta
+	
+	player.move_and_slide()
 
 func move_to(target):
-	if (player.global_position - target).length() < 5:
+	if (player.global_position - target).length() < 30:
 		player.velocity = Vector2.ZERO
 	else:
-		player.velocity = (target - player.global_position).normalized() * 600
+		player.velocity = (target - player.global_position).normalized() * 400

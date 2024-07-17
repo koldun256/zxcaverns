@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bf3wnwihk7ymg"]
+[gd_scene load_steps=13 format=3 uid="uid://bf3wnwihk7ymg"]
 
 [ext_resource type="Script" path="res://game.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://ctgumjaytuoch" path="res://level/level.tscn" id="3"]
@@ -6,6 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://b7tn56m3tpoxm" path="res://gui/pause_menu_singleplayer.tscn" id="4_x6l06"]
 [ext_resource type="PackedScene" uid="uid://b41rjv0pfh6uc" path="res://gui/PerksUI/perks_ui.tscn" id="5_8ye8h"]
 [ext_resource type="PackedScene" uid="uid://7xt85nscwjpf" path="res://perks/perks.tscn" id="6_j6m75"]
+[ext_resource type="PackedScene" uid="uid://l6o2fr26b3ph" path="res://perks/mobility/fly/fly_p.tscn" id="7_eycpc"]
+[ext_resource type="PackedScene" uid="uid://db0opax3vd478" path="res://perks/mobility/gravity/gravity_p.tscn" id="8_il0hr"]
+[ext_resource type="PackedScene" uid="uid://bdsn8bis1outv" path="res://perks/mobility/megadash/megadash_p.tscn" id="9_d44xx"]
+[ext_resource type="PackedScene" uid="uid://cootnren37mla" path="res://perks/mobility/run/run_p.tscn" id="10_4k8pa"]
+[ext_resource type="PackedScene" uid="uid://bw3bwe5r7w7w" path="res://perks/mobility/walk/walk_p.tscn" id="11_f1emq"]
+[ext_resource type="PackedScene" uid="uid://bxijk48my7fk7" path="res://perks/mobility/dnd/dnd_p.tscn" id="12_7pg6i"]
 
 [node name="Game" type="Node"]
 process_mode = 3
@@ -28,5 +34,6 @@ offset_bottom = -15.0
 [node name="PerksUI" parent="InterfaceLayer" instance=ExtResource("5_8ye8h")]
 
 [node name="Perks" parent="." instance=ExtResource("6_j6m75")]
+mobility_perks = Array[PackedScene]([ExtResource("7_eycpc"), ExtResource("8_il0hr"), ExtResource("9_d44xx"), ExtResource("10_4k8pa"), ExtResource("11_f1emq"), ExtResource("12_7pg6i")])
 
 [connection signal="on_set_perks" from="Perks" to="InterfaceLayer/PerksUI" method="_on_perks_on_set_perks"]
