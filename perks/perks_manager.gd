@@ -19,5 +19,3 @@ func update_perks():
 	
 func _ready():
 	update_perks()
-	
-	

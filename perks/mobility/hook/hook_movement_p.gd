@@ -1,4 +1,4 @@
-class_name HookMovement extends RegularMovement
+class_name HookMovementPerk extends WalkPerk
 
 @onready var hook = preload("res://perks/mobility/hook/hook_pivot.tscn")
 @onready var h = hook.instantiate()

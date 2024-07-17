@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://3qlqjptslq00"]
+
+[ext_resource type="Script" path="res://perks/mobility/terra_hook/terra_pivot.gd" id="1_xm40x"]
+[ext_resource type="Script" path="res://perks/mobility/terra_hook/terra_hook.gd" id="3_7l4qm"]
+
+[node name="TerraHook" type="Node2D"]
+position = Vector2(-1, 0)
+
+[node name="TerraHook" type="Line2D" parent="."]
+position = Vector2(1, 1)
+default_color = Color(0.752633, 0.0182562, 0.86202, 1)
+texture_mode = 1
+script = ExtResource("3_7l4qm")
+
+[node name="TerraHook2" type="Line2D" parent="."]
+position = Vector2(1, 1)
+default_color = Color(0, 0.563408, 0.510903, 1)
+texture_mode = 1
+script = ExtResource("3_7l4qm")
+
+[node name="TerraHook3" type="Line2D" parent="."]
+position = Vector2(1, 1)
+default_color = Color(0.332066, 0.559377, 3.85046e-07, 1)
+texture_mode = 1
+script = ExtResource("3_7l4qm")
+
+[node name="TerraHook4" type="Line2D" parent="."]
+position = Vector2(1, 1)
+default_color = Color(0.117947, 0.438687, 1, 1)
+texture_mode = 1
+script = ExtResource("3_7l4qm")
+
+[node name="Pivot" type="Node2D" parent="."]
+position = Vector2(1, 1)
+script = ExtResource("1_xm40x")
+
+[node name="RayCast2D" type="RayCast2D" parent="Pivot"]
+rotation = -1.5708
+target_position = Vector2(0, 350)
+collision_mask = 24
+
+[connection signal="hooked" from="TerraHook" to="Pivot" method="_on_terra_hook_hooked"]
+[connection signal="hooked" from="TerraHook2" to="Pivot" method="_on_terra_hook_hooked"]
+[connection signal="hooked" from="TerraHook3" to="Pivot" method="_on_terra_hook_hooked"]
+[connection signal="hooked" from="TerraHook4" to="Pivot" method="_on_terra_hook_hooked"]
