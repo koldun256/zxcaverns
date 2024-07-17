@@ -8,15 +8,14 @@ var THROW_SPEED = 1000.0
 @onready var level = game.get_level()
 
 func _process(_delta):
-	print('adsf')
 	if Input.is_action_just_pressed("attack"):
 		if holds_rock:
 			throw()
-			
+
 func throw():
 	var rock = rock_scene.instantiate()
 	level.add_child(rock)
-	rock.global_position = global_position
+	rock.global_position = global_position + Vector2.UP * 30
 	rock.velocity = (player.get_global_mouse_position() - player.position).normalized() * THROW_SPEED
 	holds_rock = false
 
