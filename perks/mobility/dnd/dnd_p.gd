@@ -7,6 +7,11 @@ var mouse_on_player = false
 @onready var camera = player.get_node("Camera") as Camera2D
 var camera_pivot: Node2D
 var dragging = false
+var DRAG_DURATION = 1.5
+var DRAG_CD = 1.0
+
+var drag_cd = 0
+var drag_duration = 0
 
 func start_drag():
 	camera_pivot = Node2D.new()
@@ -17,6 +22,7 @@ func start_drag():
 	camera_pivot.add_child(camera)
 	
 	dragging = true
+	drag_duration = 0
 
 func end_drag():
 	camera_pivot.remove_child(camera)
@@ -24,6 +30,7 @@ func end_drag():
 	camera_pivot.queue_free()
 	
 	dragging = false
+	drag_cd = DRAG_CD
 
 func _on_player_mouse_entered():
 	mouse_on_player = true
@@ -36,15 +43,17 @@ func _ready():
 	player.mouse_exited.connect(_on_player_mouse_exited)
 	
 func _physics_process(delta):
+	drag_cd = max(0, drag_cd - delta)
 	var pressed = Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)
 	
-	if not dragging and pressed and mouse_on_player:
+	if not dragging and pressed and mouse_on_player and drag_cd == 0:
 		start_drag()
 		
-	if dragging and not pressed:
+	if dragging and (not pressed or drag_duration > DRAG_DURATION):
 		end_drag()
 		
 	if dragging:
+		drag_duration += delta
 		move_to(player.get_global_mouse_position())
 
 func move_to(target):
