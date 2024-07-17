@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://djqnrwa0xpwxg"]
+[gd_scene load_steps=3 format=3 uid="uid://djqnrwa0xpwxg"]
 
 [ext_resource type="Script" path="res://perks/combat/dash_sword/dash_sword_p.gd" id="1_y1ap3"]
+[ext_resource type="Texture2D" uid="uid://dkni5bc224ewv" path="res://perks/combat/dash_sword/icon.png" id="2_8itr8"]
 
 [node name="Perk" type="Node"]
 script = ExtResource("1_y1ap3")
+icon = ExtResource("2_8itr8")

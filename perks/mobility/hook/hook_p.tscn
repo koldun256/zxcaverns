@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://jlqcemea3b7v"]
+
+[ext_resource type="Script" path="res://perks/mobility/hook/hook_movement_p.gd" id="1_n3m2e"]
+[ext_resource type="Texture2D" uid="uid://bscm0v0bv6nwh" path="res://perks/mobility/hook/icon.png" id="2_bdrn4"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_n3m2e")
+icon = ExtResource("2_bdrn4")

@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cxjkwqtrvi5cl"]
+[gd_scene load_steps=3 format=3 uid="uid://cxjkwqtrvi5cl"]
 
 [ext_resource type="Script" path="res://perks/combat/boomerang/boomerang_p.gd" id="1_gmrm2"]
+[ext_resource type="Texture2D" uid="uid://bdinlxmqh55nk" path="res://perks/combat/boomerang/icon.png" id="2_h6nt6"]
 
 [node name="BoomerangP" type="Node"]
 script = ExtResource("1_gmrm2")
+icon = ExtResource("2_h6nt6")
