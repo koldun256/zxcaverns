@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bf3wnwihk7ymg"]
+[gd_scene load_steps=22 format=3 uid="uid://bf3wnwihk7ymg"]
 
 [ext_resource type="Script" path="res://game.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://7xt85nscwjpf" path="res://perks/perks.tscn" id="2_0mo8c"]
@@ -6,16 +6,29 @@
 [ext_resource type="PackedScene" uid="uid://l6o2fr26b3ph" path="res://perks/mobility/fly/fly_p.tscn" id="3_0jkks"]
 [ext_resource type="PackedScene" uid="uid://djqnrwa0xpwxg" path="res://perks/combat/dash_sword/dash_sword_p.tscn" id="3_56o5q"]
 [ext_resource type="PackedScene" uid="uid://vh7pmputa7r3" path="res://player/player.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://bxijk48my7fk7" path="res://perks/mobility/dnd/dnd_p.tscn" id="4_eq31r"]
 [ext_resource type="PackedScene" uid="uid://b7tn56m3tpoxm" path="res://gui/pause_menu_singleplayer.tscn" id="4_x6l06"]
+[ext_resource type="PackedScene" uid="uid://db0opax3vd478" path="res://perks/mobility/gravity/gravity_p.tscn" id="5_6q6eo"]
 [ext_resource type="PackedScene" uid="uid://b41rjv0pfh6uc" path="res://gui/PerksUI/perks_ui.tscn" id="6_fpd7o"]
+[ext_resource type="PackedScene" uid="uid://chs2su87dju8o" path="res://perks/mobility/hook/hook.tscn" id="6_koa70"]
+[ext_resource type="PackedScene" uid="uid://bdsn8bis1outv" path="res://perks/mobility/megadash/megadash_p.tscn" id="7_25vne"]
+[ext_resource type="PackedScene" uid="uid://cootnren37mla" path="res://perks/mobility/run/run_p.tscn" id="8_geruc"]
+[ext_resource type="PackedScene" uid="uid://clxmu77qtv7te" path="res://perks/mobility/terra_hook/terra_hook_p.tscn" id="9_jbh0i"]
+[ext_resource type="PackedScene" uid="uid://bw3bwe5r7w7w" path="res://perks/mobility/walk/walk_p.tscn" id="10_dtbxi"]
+[ext_resource type="PackedScene" uid="uid://cxjkwqtrvi5cl" path="res://perks/combat/boomerang/boomerang_p.tscn" id="12_w556g"]
+[ext_resource type="PackedScene" uid="uid://c67yxj2l3uaed" path="res://perks/combat/gun/gun_p.tscn" id="13_ulj3d"]
+[ext_resource type="PackedScene" uid="uid://c2w3so2ikdg62" path="res://perks/combat/kvadrat/kvadrat_p.tscn" id="14_gfufi"]
+[ext_resource type="PackedScene" uid="uid://dookhmw1atah4" path="res://perks/combat/rock/rock_p.tscn" id="15_gav0k"]
+[ext_resource type="PackedScene" uid="uid://co8yuptqtpaq8" path="res://perks/combat/static_trap/static_trap_p.tscn" id="16_ugy2u"]
+[ext_resource type="PackedScene" uid="uid://c8h6nq2hp123" path="res://perks/combat/sword/sword_p.tscn" id="17_ic1vf"]
 
 [node name="Game" type="Node"]
 process_mode = 3
 script = ExtResource("2")
 
 [node name="Perks" parent="." instance=ExtResource("2_0mo8c")]
-mobility_perks = Array[PackedScene]([ExtResource("3_0jkks")])
-combat_perks = Array[PackedScene]([ExtResource("3_56o5q")])
+mobility_perks = Array[PackedScene]([ExtResource("3_0jkks"), ExtResource("4_eq31r"), ExtResource("5_6q6eo"), ExtResource("6_koa70"), ExtResource("7_25vne"), ExtResource("8_geruc"), ExtResource("9_jbh0i"), ExtResource("10_dtbxi")])
+combat_perks = Array[PackedScene]([ExtResource("3_56o5q"), ExtResource("12_w556g"), ExtResource("13_ulj3d"), ExtResource("14_gfufi"), ExtResource("15_gav0k"), ExtResource("16_ugy2u"), ExtResource("17_ic1vf")])
 
 [node name="Level" parent="." instance=ExtResource("3")]
 
