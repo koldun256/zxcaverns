@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxijk48my7fk7"]
+
+[ext_resource type="Script" path="res://perks/mobility/dnd/dnd_p.gd" id="1_yed1g"]
+[ext_resource type="Texture2D" uid="uid://f0wn3284sri7" path="res://perks/mobility/dnd/icon.png" id="2_7o2nj"]
+
+[node name="DndPerk" type="Node"]
+script = ExtResource("1_yed1g")
+icon = ExtResource("2_7o2nj")

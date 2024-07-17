@@ -10,6 +10,7 @@ height = 55.0
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(0.8, 0.8)
 collision_mask = 30
+input_pickable = true
 floor_constant_speed = true
 platform_on_leave = 2
 script = ExtResource("3")
@@ -27,6 +28,7 @@ limit_left = -715
 limit_top = -250
 limit_right = 1425
 limit_bottom = 690
+position_smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -18.75)
