@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://clxmu77qtv7te"]
+
+[ext_resource type="Script" path="res://perks/mobility/terra_hook/terra_hook_p.gd" id="1_tstcw"]
+[ext_resource type="Texture2D" uid="uid://bact570rgrvtv" path="res://perks/mobility/terra_hook/icon.png" id="2_y5k3x"]
+
+[node name="TerraHook" type="Node"]
+script = ExtResource("1_tstcw")
+icon = ExtResource("2_y5k3x")

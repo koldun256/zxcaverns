@@ -5,5 +5,4 @@
 
 [node name="RunPerk" type="Node"]
 script = ExtResource("1_68ia7")
-action_suffix = null
 icon = ExtResource("2_6ints")
