@@ -1,24 +1,21 @@
-[gd_scene load_steps=13 format=3 uid="uid://bf3wnwihk7ymg"]
+[gd_scene load_steps=9 format=3 uid="uid://bf3wnwihk7ymg"]
 
 [ext_resource type="Script" path="res://game.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://7xt85nscwjpf" path="res://perks/perks.tscn" id="2_0mo8c"]
 [ext_resource type="PackedScene" uid="uid://ctgumjaytuoch" path="res://level/level.tscn" id="3"]
-[ext_resource type="PackedScene" uid="uid://co8yuptqtpaq8" path="res://perks/combat/static_trap/static_trap_p.tscn" id="3_861c0"]
+[ext_resource type="PackedScene" uid="uid://l6o2fr26b3ph" path="res://perks/mobility/fly/fly_p.tscn" id="3_0jkks"]
+[ext_resource type="PackedScene" uid="uid://djqnrwa0xpwxg" path="res://perks/combat/dash_sword/dash_sword_p.tscn" id="3_56o5q"]
 [ext_resource type="PackedScene" uid="uid://vh7pmputa7r3" path="res://player/player.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://b7tn56m3tpoxm" path="res://gui/pause_menu_singleplayer.tscn" id="4_x6l06"]
-[ext_resource type="PackedScene" uid="uid://c67yxj2l3uaed" path="res://perks/combat/gun/gun_p.tscn" id="4_yb6nt"]
-[ext_resource type="PackedScene" uid="uid://c8h6nq2hp123" path="res://perks/combat/sword/sword_p.tscn" id="5_inqia"]
-[ext_resource type="PackedScene" uid="uid://c2w3so2ikdg62" path="res://perks/combat/kvadrat/kvadrat_p.tscn" id="6_460dq"]
 [ext_resource type="PackedScene" uid="uid://b41rjv0pfh6uc" path="res://gui/PerksUI/perks_ui.tscn" id="6_fpd7o"]
-[ext_resource type="PackedScene" uid="uid://dookhmw1atah4" path="res://perks/combat/rock/rock_p.tscn" id="7_by3ae"]
-[ext_resource type="PackedScene" uid="uid://cxjkwqtrvi5cl" path="res://perks/combat/boomerang/boomerang_p.tscn" id="8_mxi4x"]
 
 [node name="Game" type="Node"]
 process_mode = 3
 script = ExtResource("2")
 
 [node name="Perks" parent="." instance=ExtResource("2_0mo8c")]
-combat_perks = Array[PackedScene]([ExtResource("3_861c0"), ExtResource("4_yb6nt"), ExtResource("5_inqia"), ExtResource("6_460dq"), ExtResource("7_by3ae"), ExtResource("8_mxi4x")])
+mobility_perks = Array[PackedScene]([ExtResource("3_0jkks")])
+combat_perks = Array[PackedScene]([ExtResource("3_56o5q")])
 
 [node name="Level" parent="." instance=ExtResource("3")]
 
