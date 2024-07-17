@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://brg3yniy2je2k"]
+
+[ext_resource type="Script" path="res://perks/combat/rock/rock.gd" id="1_74b22"]
+[ext_resource type="Texture2D" uid="uid://bld4uicw8q2oa" path="res://perks/combat/rock/rock.jpg" id="2_x54v2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yq1mm"]
+radius = 38.2099
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k0qjj"]
+radius = 44.5533
+
+[node name="Rock" type="CharacterBody2D"]
+scale = Vector2(0.3, 0.3)
+collision_layer = 0
+collision_mask = 24
+script = ExtResource("1_74b22")
+
+[node name="Rock" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_x54v2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_yq1mm")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_k0qjj")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
