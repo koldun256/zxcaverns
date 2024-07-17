@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxijk48my7fk7"]
+
+[ext_resource type="Script" path="res://perks/mobility/dnd/dnd_p.gd" id="1_yed1g"]
+
+[node name="DndPerk" type="Node"]
+script = ExtResource("1_yed1g")

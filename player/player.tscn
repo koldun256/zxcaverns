@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://vh7pmputa7r3"]
+[gd_scene load_steps=5 format=3 uid="uid://vh7pmputa7r3"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://bxijk48my7fk7" path="res://perks/mobility/dnd/dnd_p.tscn" id="3_1jtos"]
 [ext_resource type="Texture2D" uid="uid://cc7o7t0ramd6y" path="res://player/robot.webp" id="9"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mo8qy"]
@@ -10,6 +11,7 @@ height = 55.0
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(0.8, 0.8)
 collision_mask = 30
+input_pickable = true
 floor_constant_speed = true
 platform_on_leave = 2
 script = ExtResource("3")
@@ -27,7 +29,10 @@ limit_left = -715
 limit_top = -250
 limit_right = 1425
 limit_bottom = 690
+position_smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -18.75)
 shape = SubResource("CapsuleShape2D_mo8qy")
+
+[node name="DndPerk" parent="." instance=ExtResource("3_1jtos")]
