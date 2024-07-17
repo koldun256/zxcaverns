@@ -8,6 +8,7 @@ var THROW_SPEED = 1000.0
 @onready var level = game.get_level()
 
 func _process(_delta):
+	print('adsf')
 	if Input.is_action_just_pressed("attack"):
 		if holds_rock:
 			throw()

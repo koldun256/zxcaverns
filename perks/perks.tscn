@@ -1,0 +1,18 @@
+[gd_scene load_steps=12 format=3 uid="uid://7xt85nscwjpf"]
+
+[ext_resource type="Script" path="res://perks/perks_manager.gd" id="1_vfpji"]
+[ext_resource type="PackedScene" uid="uid://l6o2fr26b3ph" path="res://perks/mobility/fly/fly_p.tscn" id="2_y1qep"]
+[ext_resource type="PackedScene" uid="uid://db0opax3vd478" path="res://perks/mobility/gravity/gravity_p.tscn" id="3_fx7q8"]
+[ext_resource type="PackedScene" uid="uid://bdsn8bis1outv" path="res://perks/mobility/megadash/megadash_p.tscn" id="4_v70f8"]
+[ext_resource type="PackedScene" uid="uid://cootnren37mla" path="res://perks/mobility/run/run_p.tscn" id="5_sq11f"]
+[ext_resource type="PackedScene" uid="uid://bw3bwe5r7w7w" path="res://perks/mobility/walk/walk_p.tscn" id="6_rq66x"]
+[ext_resource type="PackedScene" uid="uid://co8yuptqtpaq8" path="res://perks/combat/static_trap/static_trap_p.tscn" id="7_ntgkc"]
+[ext_resource type="PackedScene" uid="uid://cwnpl8qvfoghr" path="res://perks/combat/gun/gun_p.tscn" id="8_3a8fy"]
+[ext_resource type="PackedScene" uid="uid://c8h6nq2hp123" path="res://perks/combat/sword/sword_p.tscn" id="9_4m25j"]
+[ext_resource type="PackedScene" uid="uid://c2w3so2ikdg62" path="res://perks/combat/kvadrat/kvadrat_p.tscn" id="10_v3e5k"]
+[ext_resource type="PackedScene" uid="uid://dookhmw1atah4" path="res://perks/combat/rock/rock_p.tscn" id="11_2ro7e"]
+
+[node name="Perks" type="Node"]
+script = ExtResource("1_vfpji")
+mobility_perks = Array[PackedScene]([ExtResource("2_y1qep"), ExtResource("3_fx7q8"), ExtResource("4_v70f8"), ExtResource("5_sq11f"), ExtResource("6_rq66x")])
+combat_perks = Array[PackedScene]([ExtResource("7_ntgkc"), ExtResource("8_3a8fy"), ExtResource("9_4m25j"), ExtResource("10_v3e5k"), ExtResource("11_2ro7e")])
