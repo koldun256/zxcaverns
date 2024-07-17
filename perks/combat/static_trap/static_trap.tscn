@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbjn0b2ttm7a0"]
+
+[ext_resource type="Script" path="res://perks/combat/static_trap/static_trap.gd" id="1_lsugq"]
+[ext_resource type="Texture2D" uid="uid://bdbw3ygrpbrcb" path="res://perks/combat/static_trap/static_trap.jpg" id="2_3b1yp"]
+
+[node name="StaticTrap" type="Node2D" groups=["StaticTrap"]]
+script = ExtResource("1_lsugq")
+
+[node name="StaticTrap" type="Sprite2D" parent="."]
+position = Vector2(0, -7)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_3b1yp")

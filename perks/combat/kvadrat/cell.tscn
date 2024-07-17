@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2m1x0xlf2geo"]
+
+[ext_resource type="Script" path="res://perks/combat/kvadrat/cell.gd" id="1_gfke2"]
+[ext_resource type="Texture2D" uid="uid://cr2o4gao5pjfs" path="res://perks/combat/kvadrat/inactive.png" id="2_33u5s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_muk5u"]
+
+[node name="Cell" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_gfke2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_muk5u")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.325, 0.325)
+texture = ExtResource("2_33u5s")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

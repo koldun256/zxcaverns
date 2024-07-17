@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://co8yuptqtpaq8"]
+
+[ext_resource type="Script" path="res://perks/combat/static_trap/static_trap_p.gd" id="1_y2loe"]
+[ext_resource type="Texture2D" uid="uid://cq6e7joqmjfp2" path="res://perks/combat/static_trap/icon.png" id="2_b1y7i"]
+
+[node name="StaticTrapPerk" type="Node"]
+script = ExtResource("1_y2loe")
+icon = ExtResource("2_b1y7i")

@@ -5,5 +5,4 @@
 
 [node name="GravityPerk" type="Node"]
 script = ExtResource("1_i4ex0")
-action_suffix = null
 icon = ExtResource("2_p66wo")

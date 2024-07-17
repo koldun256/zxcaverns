@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dookhmw1atah4"]
+
+[ext_resource type="Script" path="res://perks/combat/rock/rock_p.gd" id="1_btj81"]
+[ext_resource type="Texture2D" uid="uid://bg2r756gwl1r8" path="res://perks/combat/rock/icon.png" id="2_tw7fa"]
+
+[node name="RockPerk" type="Node2D"]
+script = ExtResource("1_btj81")
+icon = ExtResource("2_tw7fa")

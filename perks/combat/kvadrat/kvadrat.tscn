@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhbmhu0t7oecd"]
+
+[ext_resource type="Script" path="res://perks/combat/kvadrat/kvadrat.gd" id="1_fvgxs"]
+
+[node name="Kvadrat" type="Node2D"]
+script = ExtResource("1_fvgxs")

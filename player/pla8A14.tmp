@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://vh7pmputa7r3"]
+
+[ext_resource type="Script" path="res://player/player.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://dhbmhu0t7oecd" path="res://perks/combat/kvadrat/kvadrat.tscn" id="3_aqb6o"]
+[ext_resource type="Texture2D" uid="uid://cc7o7t0ramd6y" path="res://player/robot.webp" id="9"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mo8qy"]
+radius = 13.75
+height = 55.0
+
+[node name="Player" type="CharacterBody2D"]
+scale = Vector2(0.8, 0.8)
+collision_mask = 30
+floor_constant_speed = true
+platform_on_leave = 2
+script = ExtResource("3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -14)
+texture = ExtResource("9")
+hframes = 8
+vframes = 8
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(0, -28)
+offset = Vector2(0, 50)
+limit_left = -715
+limit_top = -250
+limit_right = 1425
+limit_bottom = 690
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -18.75)
+shape = SubResource("CapsuleShape2D_mo8qy")
+
+[node name="Kvadrat" parent="." instance=ExtResource("3_aqb6o")]

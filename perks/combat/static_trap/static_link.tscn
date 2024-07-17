@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdepjp68w52fh"]
+
+[ext_resource type="Script" path="res://perks/combat/static_trap/static_link.gd" id="1_0umc2"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_um7e6"]
+
+[node name="StaticLink" type="Node2D"]
+script = ExtResource("1_0umc2")
+
+[node name="Line2D" type="Line2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("SegmentShape2D_um7e6")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
